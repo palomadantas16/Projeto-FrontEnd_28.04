@@ -1,0 +1,133 @@
+:root{
+    --color1: #f0f0f0;
+    --color2: #333;
+    --color3: #000;
+    --color4: #911;
+    --colorLinear: linear-gradient(red, black);
+    --font-family: "Cascadia Code", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--color1);
+    font-family:var(--font-family);
+}
+
+/**********************
+
+Estilizando o inicio
+
+***********************/
+
+#inicio{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    background: var(--color2);
+    flex-direction: column;
+    background: var(--color2);
+    justify-content: center;
+    align-items: center; 
+    opacity: 1;
+    transition: opacity 1s ease-in-out; /* faz um efeito suave de entrada e saida*/
+}
+
+#imgHero{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    margin-top: 35px;
+    animation: rodar 1s ease-in-out;
+}
+
+@keyframes rodar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#titulo{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 3rem;
+    background: var(--colorLinear);
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: efeito 1s ease-in-out;
+}
+
+@keyframes efeito{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(-10);
+    }
+}
+
+header{
+    background: var(--color3);
+    color: var(--color4);
+    padding: 20px;
+    display: flex; /* deixa um do lado do outro */
+    justify-content: space-between; /*ajusta o conteudo */
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    gap: 30px;
+    list-style: none; /*remove as bolinhas da lista */
+}
+
+header #logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}   
+
+header nav ul li a{
+    text-decoration: none; /* tira as linhas de baixo do link */
+    color: var(--color1);
+    font-weight: 800; /* deixa negrito */
+}
+
+/* hover é uma psudo-class, faz um efeito ao passar o mouse */
+
+header nav ul li a:hover{
+    color:var(--color4);
+    text-decoration: underline; /* adicina uma linha em baixo do texto */
+    text-transform: uppercase; /* deixa o texto em maiúsculo */
+
+}
+
+.cor{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background: var(--colorLinear)
+}
+
+#texto{
+    margin-top: 100px;
+    text-align: center;
+    font-size: 2rem;
+    background: var(--colorLinear);
+    text-transform: uppercase;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
